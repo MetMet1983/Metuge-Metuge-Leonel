@@ -11,6 +11,8 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
+import os
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
 # --- PAGE CONFIG ---
 st.set_page_config(page_title="RAG Chatbot", page_icon="📚")
